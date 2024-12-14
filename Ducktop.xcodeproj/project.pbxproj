@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		152493532D0D11640083BC95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 152493372D0D11630083BC95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1524933E2D0D11630083BC95;
+			remoteInfo = Ducktop;
+		};
+		1524935D2D0D11640083BC95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 152493372D0D11630083BC95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1524933E2D0D11630083BC95;
+			remoteInfo = Ducktop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1524933F2D0D11630083BC95 /* Ducktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ducktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		152493522D0D11640083BC95 /* DucktopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DucktopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1524935C2D0D11640083BC95 /* DucktopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DucktopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		152493412D0D11630083BC95 /* Ducktop */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Ducktop;
+			sourceTree = "<group>";
+		};
+		152493552D0D11640083BC95 /* DucktopTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DucktopTests;
+			sourceTree = "<group>";
+		};
+		1524935F2D0D11640083BC95 /* DucktopUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DucktopUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1524933C2D0D11630083BC95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1524934F2D0D11640083BC95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		152493592D0D11640083BC95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		152493362D0D11630083BC95 = {
+			isa = PBXGroup;
+			children = (
+				152493412D0D11630083BC95 /* Ducktop */,
+				152493552D0D11640083BC95 /* DucktopTests */,
+				1524935F2D0D11640083BC95 /* DucktopUITests */,
+				152493402D0D11630083BC95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		152493402D0D11630083BC95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1524933F2D0D11630083BC95 /* Ducktop.app */,
+				152493522D0D11640083BC95 /* DucktopTests.xctest */,
+				1524935C2D0D11640083BC95 /* DucktopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1524933E2D0D11630083BC95 /* Ducktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 152493662D0D11640083BC95 /* Build configuration list for PBXNativeTarget "Ducktop" */;
+			buildPhases = (
+				1524933B2D0D11630083BC95 /* Sources */,
+				1524933C2D0D11630083BC95 /* Frameworks */,
+				1524933D2D0D11630083BC95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				152493412D0D11630083BC95 /* Ducktop */,
+			);
+			name = Ducktop;
+			packageProductDependencies = (
+			);
+			productName = Ducktop;
+			productReference = 1524933F2D0D11630083BC95 /* Ducktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		152493512D0D11640083BC95 /* DucktopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 152493692D0D11640083BC95 /* Build configuration list for PBXNativeTarget "DucktopTests" */;
+			buildPhases = (
+				1524934E2D0D11640083BC95 /* Sources */,
+				1524934F2D0D11640083BC95 /* Frameworks */,
+				152493502D0D11640083BC95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				152493542D0D11640083BC95 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				152493552D0D11640083BC95 /* DucktopTests */,
+			);
+			name = DucktopTests;
+			packageProductDependencies = (
+			);
+			productName = DucktopTests;
+			productReference = 152493522D0D11640083BC95 /* DucktopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1524935B2D0D11640083BC95 /* DucktopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1524936C2D0D11640083BC95 /* Build configuration list for PBXNativeTarget "DucktopUITests" */;
+			buildPhases = (
+				152493582D0D11640083BC95 /* Sources */,
+				152493592D0D11640083BC95 /* Frameworks */,
+				1524935A2D0D11640083BC95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1524935E2D0D11640083BC95 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1524935F2D0D11640083BC95 /* DucktopUITests */,
+			);
+			name = DucktopUITests;
+			packageProductDependencies = (
+			);
+			productName = DucktopUITests;
+			productReference = 1524935C2D0D11640083BC95 /* DucktopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		152493372D0D11630083BC95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					1524933E2D0D11630083BC95 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					152493512D0D11640083BC95 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 1524933E2D0D11630083BC95;
+					};
+					1524935B2D0D11640083BC95 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 1524933E2D0D11630083BC95;
+					};
+				};
+			};
+			buildConfigurationList = 1524933A2D0D11630083BC95 /* Build configuration list for PBXProject "Ducktop" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 152493362D0D11630083BC95;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 152493402D0D11630083BC95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1524933E2D0D11630083BC95 /* Ducktop */,
+				152493512D0D11640083BC95 /* DucktopTests */,
+				1524935B2D0D11640083BC95 /* DucktopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1524933D2D0D11630083BC95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		152493502D0D11640083BC95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1524935A2D0D11640083BC95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1524933B2D0D11630083BC95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1524934E2D0D11640083BC95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		152493582D0D11640083BC95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		152493542D0D11640083BC95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1524933E2D0D11630083BC95 /* Ducktop */;
+			targetProxy = 152493532D0D11640083BC95 /* PBXContainerItemProxy */;
+		};
+		1524935E2D0D11640083BC95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1524933E2D0D11630083BC95 /* Ducktop */;
+			targetProxy = 1524935D2D0D11640083BC95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		152493642D0D11640083BC95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		152493652D0D11640083BC95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		152493672D0D11640083BC95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Ducktop/Ducktop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ducktop/Preview Content\"";
+				DEVELOPMENT_TEAM = CALXAR5SZV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.nouturnsign.Ducktop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		152493682D0D11640083BC95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Ducktop/Ducktop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ducktop/Preview Content\"";
+				DEVELOPMENT_TEAM = CALXAR5SZV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.nouturnsign.Ducktop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1524936A2D0D11640083BC95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CALXAR5SZV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.nouturnsign.DucktopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ducktop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ducktop";
+			};
+			name = Debug;
+		};
+		1524936B2D0D11640083BC95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CALXAR5SZV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.nouturnsign.DucktopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ducktop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ducktop";
+			};
+			name = Release;
+		};
+		1524936D2D0D11640083BC95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CALXAR5SZV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.nouturnsign.DucktopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Ducktop;
+			};
+			name = Debug;
+		};
+		1524936E2D0D11640083BC95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CALXAR5SZV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.nouturnsign.DucktopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Ducktop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1524933A2D0D11630083BC95 /* Build configuration list for PBXProject "Ducktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				152493642D0D11640083BC95 /* Debug */,
+				152493652D0D11640083BC95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		152493662D0D11640083BC95 /* Build configuration list for PBXNativeTarget "Ducktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				152493672D0D11640083BC95 /* Debug */,
+				152493682D0D11640083BC95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		152493692D0D11640083BC95 /* Build configuration list for PBXNativeTarget "DucktopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1524936A2D0D11640083BC95 /* Debug */,
+				1524936B2D0D11640083BC95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1524936C2D0D11640083BC95 /* Build configuration list for PBXNativeTarget "DucktopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1524936D2D0D11640083BC95 /* Debug */,
+				1524936E2D0D11640083BC95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 152493372D0D11630083BC95 /* Project object */;
+}
