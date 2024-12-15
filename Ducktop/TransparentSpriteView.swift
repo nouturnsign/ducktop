@@ -20,11 +20,10 @@ struct TransparentSpriteView: NSViewRepresentable {
         // Set the view allows transparency and clear
         let skView = SKView()
         skView.allowsTransparency = true
+        skView.ignoresSiblingOrder = true
+        skView.presentScene(scene)
         return skView
     }
 
-    func updateNSView(_ nsView: SKView, context: Context) {
-        // Update the scene if needed (e.g., replace it with a new scene)
-        nsView.presentScene(scene)
-    }
+    func updateNSView(_ nsView: SKView, context: Context) { }
 }

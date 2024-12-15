@@ -12,7 +12,7 @@ struct DucktopApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .background(TransparentWindow())
+                .background(TransparentView())
         }
     }
 }

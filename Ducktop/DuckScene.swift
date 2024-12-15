@@ -58,6 +58,7 @@ class DuckScene: SKScene {
                                 dy: normalizedDirection.dy * moveSpeed * timePerFrame)
 
         // Update the duck's position
-        duck.position = CGPoint(x: duck.position.x + movement.dx, y: duck.position.y + movement.dy)
+        duck.position.x += movement.dx
+        duck.position.y += movement.dy
     }
 }
