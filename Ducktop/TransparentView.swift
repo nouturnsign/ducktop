@@ -10,7 +10,7 @@ import AppKit
 
 struct TransparentView: NSViewRepresentable {
     func makeNSView(context: Context) -> NSView {
-        return TransparentNSView(frame: .zero)
+        return TransparentNSView()
     }
 
     func updateNSView(_ nsView: NSView, context: Context) {}

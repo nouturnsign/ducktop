@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView : View {
     var body : some View {
-        TransparentSpriteView(scene: DuckScene(size: CGSize(width: 64, height: 64)))
+        TransparentSpriteView(scene: DuckScene(size: CGSize(width: 256, height: 256)))
+            .background(TransparentView())
     }
 }
 

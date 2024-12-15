@@ -13,7 +13,7 @@ class DuckScene: SKScene {
     private var duck: SKSpriteNode!
     private var targetPosition: CGPoint?
     private let textures = textureNames.map { name in SKTexture(imageNamed: name) }
-    private let moveSpeed: CGFloat = 0.2
+    private let moveSpeed: CGFloat = 1.0
     private let timePerFrame: CGFloat = 0.2
     private let duckSizeRatio: CGFloat = 0.02
 
@@ -60,5 +60,8 @@ class DuckScene: SKScene {
         // Update the duck's position
         duck.position.x += movement.dx
         duck.position.y += movement.dy
+        
+        // Save duck position
+        DuckState.shared.savePosition(duck.position)
     }
 }
