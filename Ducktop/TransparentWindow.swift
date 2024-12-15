@@ -15,6 +15,7 @@ struct TransparentWindow: NSViewRepresentable {
         // Access the NSWindow to modify its properties
         DispatchQueue.main.async {
             if let window = view.window {
+                // Set the window to invisible
                 window.isOpaque = false
                 window.backgroundColor = .clear
                 window.level = .floating
@@ -22,6 +23,11 @@ struct TransparentWindow: NSViewRepresentable {
                 window.titlebarAppearsTransparent = true
                 window.styleMask.remove(.titled) // Remove title bar
                 window.ignoresMouseEvents = true // Make the window non-clickable
+                
+                // Set the window to full-screen
+                window.setFrame(NSScreen.main?.frame ?? NSRect.zero, display: true)
+                window.collectionBehavior = .fullScreenPrimary
+                window.makeKeyAndOrderFront(nil) // Bring window to front
             }
         }
 

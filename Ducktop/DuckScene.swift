@@ -11,18 +11,53 @@ fileprivate let textureNames = ["kaczuha 4 1", "kaczuha 4 2", "kaczuha 4 3", "ka
 
 class DuckScene: SKScene {
     private var duck: SKSpriteNode!
+    private var targetPosition: CGPoint?
     private let textures = textureNames.map { name in SKTexture(imageNamed: name) }
+    private let moveSpeed: CGFloat = 0.2
+    private let timePerFrame: CGFloat = 0.2
+    private let duckSizeRatio: CGFloat = 0.02
 
     override func didMove(to view: SKView) {
         // Add duck sprite
         duck = SKSpriteNode(texture: textures.first)
-        duck.size = CGSize(width: 64, height: 64)
+        duck.size = CGSize(width: size.width * duckSizeRatio, height: size.height * duckSizeRatio)
         duck.position = CGPoint(x: size.width / 2, y: size.height / 2)
         addChild(duck)
 
         // Start walking animation
-        let walkAction = SKAction.animate(with: textures, timePerFrame: 0.2)
+        let walkAction = SKAction.animate(with: textures, timePerFrame: timePerFrame)
         let loopAction = SKAction.repeatForever(walkAction)
         duck.run(loopAction)
+        
+        // Track mouse movement
+        NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) { event in
+            // Convert macOS window coordinates to SpriteKit scene coordinates
+            let sceneLocation = self.convertPoint(fromView: event.locationInWindow)
+            self.targetPosition = sceneLocation
+            return event
+        }
+    }
+
+    override func update(_ currentTime: TimeInterval) {
+        guard let target = targetPosition else { return }
+
+        // Calculate the direction to the target
+        let direction = CGVector(dx: target.x - duck.position.x, dy: target.y - duck.position.y)
+        let distance = hypot(direction.dx, direction.dy)
+
+        // If the duck is close enough, stop moving
+        if distance < 1.0 {
+            return
+        }
+
+        // Normalize the direction vector
+        let normalizedDirection = CGVector(dx: direction.dx / distance, dy: direction.dy / distance)
+
+        // Calculate movement for this frame
+        let movement = CGVector(dx: normalizedDirection.dx * moveSpeed * timePerFrame,
+                                dy: normalizedDirection.dy * moveSpeed * timePerFrame)
+
+        // Update the duck's position
+        duck.position = CGPoint(x: duck.position.x + movement.dx, y: duck.position.y + movement.dy)
     }
 }

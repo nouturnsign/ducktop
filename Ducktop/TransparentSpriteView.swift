@@ -13,13 +13,13 @@ struct TransparentSpriteView: NSViewRepresentable {
     let scene: SKScene
 
     func makeNSView(context: Context) -> SKView {
-        // Set the scene background to clear
+        // Set the scene background to clear and scale properly
         scene.backgroundColor = .clear
+        scene.scaleMode = .aspectFill
         
         // Set the view allows transparency and clear
         let skView = SKView()
         skView.allowsTransparency = true
-        skView.presentScene(scene)
         return skView
     }
 

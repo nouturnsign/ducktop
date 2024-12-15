@@ -7,16 +7,12 @@
 
 import SwiftUI
 
-fileprivate let duckWidth = 64
-fileprivate let duckHeight = 64
-
 struct ContentView : View {
-    private let scene = DuckScene(size: CGSize(width: duckWidth, height: duckHeight))
+    private let sceneSize = CGSize(width: 64, height: 64)
     
     var body : some View {
-        TransparentSpriteView(scene: scene)
+        TransparentSpriteView(scene: DuckScene(size: sceneSize))
             .background(Color.clear)
-            .frame(width: CGFloat(duckWidth), height: CGFloat(duckHeight))
     }
 }
 
