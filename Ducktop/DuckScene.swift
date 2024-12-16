@@ -30,9 +30,10 @@ class DuckScene: SKScene {
         duck.run(loopAction)
         
         // Track mouse movement
-        NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) { event in
+        NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) { [weak self] event in
+            guard let self = self, let skView = self.view else { return event }
             // Convert macOS window coordinates to SpriteKit scene coordinates
-            let sceneLocation = self.convertPoint(fromView: event.locationInWindow)
+            let sceneLocation = skView.scene?.convertPoint(fromView: event.locationInWindow)
             self.targetPosition = sceneLocation
             return event
         }
@@ -40,15 +41,14 @@ class DuckScene: SKScene {
 
     override func update(_ currentTime: TimeInterval) {
         guard let target = targetPosition else { return }
+        print(duck.position, target)
 
         // Calculate the direction to the target
         let direction = CGVector(dx: target.x - duck.position.x, dy: target.y - duck.position.y)
         let distance = hypot(direction.dx, direction.dy)
 
         // If the duck is close enough, stop moving
-        if distance < 1.0 {
-            return
-        }
+        if distance < 1.0 { return }
 
         // Normalize the direction vector
         let normalizedDirection = CGVector(dx: direction.dx / distance, dy: direction.dy / distance)
