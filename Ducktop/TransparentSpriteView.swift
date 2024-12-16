@@ -12,11 +12,7 @@ import SpriteKit
 struct TransparentSpriteView: NSViewRepresentable {
     let scene: SKScene
 
-    func makeNSView(context: Context) -> SKView {
-        // Set the scene background to clear and scale properly
-        scene.backgroundColor = .clear
-        scene.scaleMode = .aspectFill
-        
+    func makeNSView(context: Context) -> SKView {        
         // Set the view allows transparency and clear
         let skView = SKView()
         skView.allowsTransparency = true
