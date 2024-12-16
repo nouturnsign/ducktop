@@ -7,15 +7,22 @@
 
 import SpriteKit
 
+fileprivate enum DuckDirection {
+    case idle
+    case frontWalk
+    case backWalk
+}
 fileprivate let idleTextureNames = ["kaczuha 1", "kaczuha 2", "kaczuha 3", "kaczuha 4", "kaczuha 5"]
 fileprivate let frontWalkTextureNames = ["kaczuha 4 1", "kaczuha 4 2", "kaczuha 4 3", "kaczuha 4 4"]
+fileprivate let backWalkTextureNames = ["kaczuha 5 1", "kaczuha 5 2", "kaczuha 5 3", "kaczuha 5 4"]
 
 class DuckScene: SKScene {
     private var duck: SKSpriteNode!
     private var targetPosition: CGPoint?
-    private var isIdle: Bool = false
-    private let frontWalkTextures = frontWalkTextureNames.map { name in SKTexture(imageNamed: name) }
+    private var duckDirection: DuckDirection = .idle
     private let idleTextures = idleTextureNames.map { name in SKTexture(imageNamed: name) }
+    private let frontWalkTextures = frontWalkTextureNames.map { name in SKTexture(imageNamed: name) }
+    private let backWalkTextures = backWalkTextureNames.map { name in SKTexture(imageNamed: name) }
     private let moveSpeed: CGFloat = 1.0
     private let timePerFrame: CGFloat = 0.2
     private let duckSizeRatio: CGFloat = 0.04
@@ -31,8 +38,8 @@ class DuckScene: SKScene {
         duck.size = CGSize(width: size.width * duckSizeRatio, height: size.height * duckSizeRatio)
         duck.position = CGPoint(x: size.width / 2, y: size.height / 2)
         addChild(duck)
-        isIdle = true
-        playIdleAnimation()
+        duckDirection = .idle
+        setDuckDirection(.idle)
         
         // Track mouse movement
         NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) { [weak self] event in
@@ -53,10 +60,7 @@ class DuckScene: SKScene {
 
         // If the duck is close enough, stop moving
         if distance < idleRadius {
-            if !isIdle {
-                playIdleAnimation()
-                isIdle = true
-            }
+            setDuckDirection(.idle)
             return
         }
 
@@ -70,26 +74,29 @@ class DuckScene: SKScene {
         // Update the duck's position
         duck.position.x += movement.dx
         duck.position.y += movement.dy
-        if isIdle {
-            playWalkAnimation()
-            isIdle = false
+        if movement.dx < 0 {
+            setDuckDirection(.frontWalk)
+        }
+        else {
+            setDuckDirection(.backWalk)
         }
         
         // Save duck position
         DuckState.shared.savePosition(duck.position)
     }
     
-    private func playIdleAnimation() {
-        duck.removeAllActions()
-        let idleAction = SKAction.animate(with: idleTextures, timePerFrame: timePerFrame)
-        let loopAction = SKAction.repeatForever(idleAction)
-        duck.run(loopAction, withKey: "idle")
-    }
-
-    private func playWalkAnimation() {
-        duck.removeAllActions()
-        let walkAction = SKAction.animate(with: frontWalkTextures, timePerFrame: timePerFrame)
-        let loopAction = SKAction.repeatForever(walkAction)
-        duck.run(loopAction, withKey: "walk")
+    private func setDuckDirection(_ direction: DuckDirection) {
+        if duckDirection != direction {
+            duck.removeAllActions()
+            let (textures, key) = switch direction {
+            case .idle: (idleTextures, "idle")
+            case .frontWalk: (frontWalkTextures, "frontWalk")
+            case .backWalk: (backWalkTextures, "backWalk")
+            }
+            let action = SKAction.animate(with: textures, timePerFrame: timePerFrame)
+            let loopAction = SKAction.repeatForever(action)
+            duck.run(loopAction, withKey: key)
+            duckDirection = direction
+        }
     }
 }
