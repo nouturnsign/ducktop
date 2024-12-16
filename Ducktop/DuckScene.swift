@@ -41,7 +41,6 @@ class DuckScene: SKScene {
 
     override func update(_ currentTime: TimeInterval) {
         guard let target = targetPosition else { return }
-        print(duck.position, target)
 
         // Calculate the direction to the target
         let direction = CGVector(dx: target.x - duck.position.x, dy: target.y - duck.position.y)

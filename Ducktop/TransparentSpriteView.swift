@@ -28,11 +28,13 @@ struct TransparentSpriteView: NSViewRepresentable {
             guard let window = skView.window else { return }
             window.isOpaque = false
             window.backgroundColor = .clear
+            window.hasShadow = false
             window.styleMask.remove(.titled)
             window.ignoresMouseEvents = true
             window.setFrame(NSScreen.main?.frame ?? NSRect.zero, display: true)
             window.level = .floating
             window.makeKeyAndOrderFront(nil)
+            window.isRestorable = false
             skView.frame = window.frame
         }
 
