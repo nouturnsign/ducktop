@@ -15,7 +15,8 @@ class DuckScene: SKScene {
     private let textures = textureNames.map { name in SKTexture(imageNamed: name) }
     private let moveSpeed: CGFloat = 1.0
     private let timePerFrame: CGFloat = 0.2
-    private let duckSizeRatio: CGFloat = 0.02
+    private let duckSizeRatio: CGFloat = 0.04
+    private let idleRadius: CGFloat = 8.0
 
     override func didMove(to view: SKView) {
         // Add duck sprite
@@ -47,7 +48,7 @@ class DuckScene: SKScene {
         let distance = hypot(direction.dx, direction.dy)
 
         // If the duck is close enough, stop moving
-        if distance < 1.0 { return }
+        if distance < idleRadius { return }
 
         // Normalize the direction vector
         let normalizedDirection = CGVector(dx: direction.dx / distance, dy: direction.dy / distance)
