@@ -1,0 +1,50 @@
+# Xcode
+#
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+xcuserdata/
+xcuserdata/*.xcuserdatad/
+
+# CocoaPods
+#
+Pods/
+# Uncomment if you have the Pods directory checked in
+# Podfile.lock
+
+# Carthage
+#
+Carthage/Build/
+
+# fastlane
+#
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# Swift Package Manager
+#
+Packages
+*.xcodeproj/*
+!.xcodeproj/project.pbxproj
+!.xcodeproj/xcshareddata
+!.xcodeproj/xcshareddata/xcschemes
+.swiftpm
+Package.resolved
+.build/
+
+# Xcode Patch Files
+*.xcpatch
+
+# Other
+
+.DS_Store
