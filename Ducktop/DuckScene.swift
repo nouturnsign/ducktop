@@ -43,6 +43,7 @@ class DuckScene: SKScene {
         setDuckDirection(.idle)
         
         // Track mouse movement
+        // TODO: consider enabling cross-monitor movement or changing primary monitor
         NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) { [weak self] event in
             guard let self = self, let skView = self.view else { return event }
             // Convert macOS window coordinates to SpriteKit scene coordinates
