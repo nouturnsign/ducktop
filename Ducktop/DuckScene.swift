@@ -11,6 +11,7 @@ fileprivate enum DuckDirection {
     case idle
     case frontWalk
     case backWalk
+    // TODO: add tempIdle direction, used to ease transition from backWalk to idle
 }
 fileprivate let idleTextureNames = ["kaczuha 1", "kaczuha 2", "kaczuha 3", "kaczuha 4", "kaczuha 5"]
 fileprivate let frontWalkTextureNames = ["kaczuha 4 1", "kaczuha 4 2", "kaczuha 4 3", "kaczuha 4 4"]
