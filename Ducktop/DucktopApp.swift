@@ -15,18 +15,8 @@ struct DucktopApp: App {
         WindowGroup {
             ContentView(isDuckVisible: $isDuckVisible)
         }
-        
-        // TODO: use a duck image instead of bird system image
-        MenuBarExtra("Ducktop", systemImage: "bird") {
-            Button("About Ducktop") {
-                // TODO: make the about page easier to see
-                let alert = NSAlert()
-                alert.messageText = "Ducktop App"
-                alert.informativeText = "Version 1.0\nDeveloped by Eric Wang\nEnjoy the duck following your cursor!"
-                alert.alertStyle = .informational
-                alert.runModal()
-            }
-            
+
+        MenuBarExtra("Ducktop", image: "duck-icon") {
             Button(isDuckVisible ? "Hide Duck" : "Show Duck") {
                 // TODO: add graceful enter and exit animations
                 isDuckVisible.toggle()
