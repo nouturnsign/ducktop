@@ -37,13 +37,14 @@ class DuckScene: SKScene {
         // Add duck sprite
         duck = SKSpriteNode(texture: frontWalkTextures.first)
         duck.size = CGSize(width: size.width * duckSizeRatio, height: size.height * duckSizeRatio)
-        duck.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        duck.position = DuckState.shared.lastPosition
         addChild(duck)
         duckDirection = .idle
         setDuckDirection(.idle)
         
         // Track mouse movement
         // TODO: consider enabling cross-monitor movement or changing primary monitor
+        // TODO: handle off-screen movement
         NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) { [weak self] event in
             guard let self = self, let skView = self.view else { return event }
             // Convert macOS window coordinates to SpriteKit scene coordinates

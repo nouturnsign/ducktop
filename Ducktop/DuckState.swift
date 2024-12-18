@@ -11,14 +11,16 @@ import CoreGraphics
 
 class DuckState: ObservableObject {
     static let shared = DuckState()
-    @Published var lastPosition: CGPoint = .zero // Last position of the duck
+    @Published var lastPosition: CGPoint
     
     private let positionKey = "DuckLastPosition"
 
     private init() {
-        // Load saved position
         if let savedPosition = UserDefaults.standard.object(forKey: positionKey) as? [CGFloat], savedPosition.count == 2 {
             lastPosition = CGPoint(x: savedPosition[0], y: savedPosition[1])
+        }
+        else {
+            lastPosition = .zero
         }
     }
 

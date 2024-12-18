@@ -13,7 +13,7 @@ struct DucktopApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(isDuckVisible: $isDuckVisible)
         }
         
         // TODO: use a duck image instead of bird system image
@@ -28,7 +28,7 @@ struct DucktopApp: App {
             }
             
             Button(isDuckVisible ? "Hide Duck" : "Show Duck") {
-                // TODO: this setting doesn't do anything currently; add graceful enter and exit animations
+                // TODO: add graceful enter and exit animations
                 isDuckVisible.toggle()
             }
             

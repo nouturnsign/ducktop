@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView : View {
+    @Binding var isDuckVisible: Bool
+    
     var body : some View {
-        TransparentSpriteView(scene: DuckScene(size: CGSize(width: 256, height: 256)))
+        if isDuckVisible {
+            TransparentSpriteView(scene: DuckScene(size: CGSize(width: 256, height: 256)))
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(isDuckVisible: .constant(true))
 }
