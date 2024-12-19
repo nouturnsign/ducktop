@@ -14,26 +14,10 @@ struct TransparentSpriteView: NSViewRepresentable {
 
     func makeNSView(context: Context) -> SKView {        
         // Set the view allows transparency and clear
-        let skView = SKView()
+        let skView = TransparentSKView()
         skView.allowsTransparency = true
         skView.ignoresSiblingOrder = true
         skView.presentScene(scene)
-        
-        // Make the window "invisible"
-        DispatchQueue.main.async {
-            guard let window = skView.window else { return }
-            window.isOpaque = false
-            window.backgroundColor = .clear
-            window.hasShadow = false
-            window.styleMask.remove(.titled)
-            window.ignoresMouseEvents = true
-            window.setFrame(NSScreen.main?.frame ?? NSRect.zero, display: true)
-            window.level = .floating
-            window.makeKeyAndOrderFront(nil)
-            window.isRestorable = false
-            skView.frame = window.frame
-        }
-
         return skView
     }
 
