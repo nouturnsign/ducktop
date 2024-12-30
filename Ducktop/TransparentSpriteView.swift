@@ -10,7 +10,8 @@ import SwiftUI
 import SpriteKit
 
 struct TransparentSpriteView: NSViewRepresentable {
-    let scene: SKScene
+    let scene: DuckScene
+    @Binding var snapToCenter: Bool
 
     func makeNSView(context: Context) -> SKView {        
         // Set the view allows transparency and clear
@@ -21,5 +22,10 @@ struct TransparentSpriteView: NSViewRepresentable {
         return skView
     }
 
-    func updateNSView(_ nsView: SKView, context: Context) { }
+    func updateNSView(_ nsView: SKView, context: Context) {
+        if (snapToCenter) {
+            scene.snapToCenter()
+            snapToCenter = false
+        }
+    }
 }

@@ -28,6 +28,7 @@ class DuckScene: SKScene {
     private let timePerFrame: CGFloat = 0.2
     private let duckSizeRatio: CGFloat = 0.04
     private let idleRadius: CGFloat = 8.0
+    private var shouldSnapToCenter: Bool = false
 
     override func didMove(to view: SKView) {
         // Set the scene background to clear and scale properly
@@ -53,8 +54,18 @@ class DuckScene: SKScene {
             return event
         }
     }
+    
+    func snapToCenter() {
+        shouldSnapToCenter = true
+    }
 
     override func update(_ currentTime: TimeInterval) {
+        if (shouldSnapToCenter) {
+            DuckState.shared.savePosition(CGPoint(x: size.width / 2, y: size.height / 2))
+            duck.position = DuckState.shared.lastPosition
+            shouldSnapToCenter = false
+            return
+        }
         guard let target = targetPosition else { return }
 
         // Calculate the direction to the target
