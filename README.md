@@ -1,8 +1,7 @@
 # Ducktop
 
-A duck companion for your desktop.
+A duck companion for your Mac!
 
 ## Warning
 
-Currently, there is little testing. It probably only works on one monitor for now.
-
+Currently, there is very little testing. Expect crashes!

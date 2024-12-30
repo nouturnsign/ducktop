@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		15B134A82D225B9D007DF016 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 15B134A72D225B9D007DF016 /* README.md */; };
+		15B134B02D225C27007DF016 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 15B134AF2D225C27007DF016 /* LICENSE.txt */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		152493532D0D11640083BC95 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		1524933F2D0D11630083BC95 /* Ducktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ducktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		152493522D0D11640083BC95 /* DucktopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DucktopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1524935C2D0D11640083BC95 /* DucktopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DucktopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B134A72D225B9D007DF016 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		15B134AF2D225C27007DF016 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +82,8 @@
 		152493362D0D11630083BC95 = {
 			isa = PBXGroup;
 			children = (
+				15B134AF2D225C27007DF016 /* LICENSE.txt */,
+				15B134A72D225B9D007DF016 /* README.md */,
 				152493412D0D11630083BC95 /* Ducktop */,
 				152493552D0D11640083BC95 /* DucktopTests */,
 				1524935F2D0D11640083BC95 /* DucktopUITests */,
@@ -212,6 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B134B02D225C27007DF016 /* LICENSE.txt in Resources */,
+				15B134A82D225B9D007DF016 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
