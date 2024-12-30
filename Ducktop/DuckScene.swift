@@ -44,15 +44,24 @@ class DuckScene: SKScene {
         setDuckDirection(.idle)
         
         // Track mouse movement
-        // TODO: consider enabling cross-monitor movement or changing primary monitor
-        // TODO: handle off-screen movement
+        // TODO: consider enabling cross-monitor movement
         NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) { [weak self] event in
-            guard let self = self, let skView = self.view else { return event }
+            guard let self = self, let view = self.view, let window = view.window else { return event }
+            
+            let globalMouseLocation = NSEvent.mouseLocation
+            let screenFrame = window.screen?.frame ?? .zero
+            let localMouseLocation = CGPoint(x: globalMouseLocation.x - screenFrame.origin.x,
+                                              y: globalMouseLocation.y - screenFrame.origin.y)
+            
             // Convert macOS window coordinates to SpriteKit scene coordinates
-            let sceneLocation = skView.scene?.convertPoint(fromView: event.locationInWindow)
+            var sceneLocation = self.convertPoint(fromView: localMouseLocation)
+            sceneLocation.x = max(0, min(sceneLocation.x, self.size.width))
+            sceneLocation.y = max(0, min(sceneLocation.y, self.size.height))
             self.targetPosition = sceneLocation
             return event
         }
+        
+        // TODO: get rid of the initial weird frame
     }
     
     func snapToCenter() {

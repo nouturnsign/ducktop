@@ -12,8 +12,9 @@ import SpriteKit
 struct TransparentSpriteView: NSViewRepresentable {
     let scene: DuckScene
     @Binding var snapToCenter: Bool
+    @Binding var screenIndex: Int
 
-    func makeNSView(context: Context) -> SKView {        
+    func makeNSView(context: Context) -> TransparentSKView {
         // Set the view allows transparency and clear
         let skView = TransparentSKView()
         skView.allowsTransparency = true
@@ -22,10 +23,11 @@ struct TransparentSpriteView: NSViewRepresentable {
         return skView
     }
 
-    func updateNSView(_ nsView: SKView, context: Context) {
-        if (snapToCenter) {
+    func updateNSView(_ skView: TransparentSKView, context: Context) {
+        if snapToCenter {
             scene.snapToCenter()
             snapToCenter = false
         }
+        skView.setScreenIndex(screenIndex)
     }
 }
