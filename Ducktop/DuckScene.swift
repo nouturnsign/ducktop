@@ -14,7 +14,7 @@ fileprivate enum DuckDirection {
     // TODO: add tempIdle direction, used to ease transition from backWalk to idle
 }
 fileprivate let idleTextureNames = ["kaczuha 1", "kaczuha 2", "kaczuha 3", "kaczuha 4", "kaczuha 5"]
-fileprivate let frontWalkTextureNames = ["kaczuha 4 1", "kaczuha 4 2", "kaczuha 4 3", "kaczuha 4 4"]
+fileprivate let frontWalkTextureNames = ["Walking_Animation-1", "Walking_Animation-2", "Walking_Animation-3", "Walking_Animation-4", "Walking_Animation-5", "Walking_Animation-6", "Walking_Animation-7", "Walking_Animation-8", "Walking_Animation-9", "Walking_Animation-10", "Walking_Animation-11", "Walking_Animation-12", "Walking_Animation-13"]
 fileprivate let backWalkTextureNames = ["kaczuha 5 1", "kaczuha 5 2", "kaczuha 5 3", "kaczuha 5 4"]
 
 class DuckScene: SKScene {
@@ -24,9 +24,9 @@ class DuckScene: SKScene {
     private let idleTextures = idleTextureNames.map { name in SKTexture(imageNamed: name) }
     private let frontWalkTextures = frontWalkTextureNames.map { name in SKTexture(imageNamed: name) }
     private let backWalkTextures = backWalkTextureNames.map { name in SKTexture(imageNamed: name) }
-    private let moveSpeed: CGFloat = 1.0
+    private let moveSpeed: CGFloat = 0.8
     private let timePerFrame: CGFloat = 0.2
-    private let duckSizeRatio: CGFloat = 0.04
+    private let duckSizeRatio: CGFloat = 0.07
     private let idleRadius: CGFloat = 8.0
     private var shouldSnapToCenter: Bool = false
 
@@ -61,7 +61,7 @@ class DuckScene: SKScene {
             return event
         }
         
-        // TODO: get rid of the initial weird frame
+        // TODO: get rid of the initial weird frame and stutter in animation
     }
     
     func snapToCenter() {
